@@ -1,0 +1,18 @@
+.Main {
+  overflow-y: scroll;
+  flex: 1;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: lighten($color: $color-primary, $amount: 50%);
+  }
+}

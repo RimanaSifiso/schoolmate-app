@@ -1,0 +1,192 @@
+.AppBar {
+  @include container-theme;
+
+  & {
+    height: 7rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 20rem;
+    box-shadow: $box-shadow;
+
+    @media screen and (max-width: 1400px) {
+      padding: 0 10rem;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: 0 5rem;
+    }
+    @media screen and (max-width: 700px) {
+      padding: 0 1rem;
+    }
+  }
+
+  &.dark {
+    a,
+    .hamburger {
+      &:hover {
+        background-color: darken($color: $color-primary, $amount: 20%);
+      }
+      &:active {
+        background-color: darken($color: $color-primary, $amount: 30%);
+      }
+    }
+  }
+  .app-name {
+    h1 {
+      font-weight: 400;
+      padding-left: 2rem;
+    }
+    // background-color: yellow;
+  }
+  & .logo-box {
+    &,
+    &:link,
+    &:visited,
+    &:focus,
+    &:active {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $color-primary;
+      font-size: $text-size-big;
+      margin-right: auto;
+
+      & .logo {
+        height: 100%;
+        padding: 1rem;
+
+        & span {
+          height: 100% !important;
+          margin-right: 2rem;
+
+          & img {
+            height: 100% !important;
+          }
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .for-desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & a {
+    &,
+    &:link,
+    &:visited,
+    &:focus,
+    &:active {
+      &,
+      &.white {
+        @include link;
+      }
+    }
+
+    &:hover {
+      background-color: lighten($color: $color-primary, $amount: 50%);
+    }
+    &:active {
+      background-color: lighten($color: $color-primary, $amount: 30%);
+    }
+  }
+
+  ul {
+    display: flex;
+
+    .btn {
+      align-self: center;
+    }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .settings-theme {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+
+    label {
+      display: block;
+      position: relative;
+      padding: $small-gutter 0;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      display: flex;
+
+      span {
+        display: block;
+
+        &.toogler {
+          font-size: 2.3rem;
+          padding: 2rem;
+          margin-left: 2rem;
+          color: $color-primary;
+        }
+      }
+    }
+    input {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    padding: 2rem;
+    margin-left: 10rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 0.3rem;
+
+    @media screen and (max-width: 600px) {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      background-color: lighten($color: $color-primary, $amount: 50%);
+      border-radius: 0.3rem;
+    }
+    &:active {
+      background-color: lighten($color: $color-primary, $amount: 30%);
+      transform: scale(0.95);
+      border-radius: 0.3rem;
+    }
+
+    .more {
+      display: block;
+      background-color: $color-primary;
+      width: 2.5rem;
+      height: 2px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 0.3rem;
+
+      &::after,
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        border-radius: inherit;
+      }
+
+      &::after {
+        position: absolute;
+        top: -0.8rem;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import './variables';
+@import './base';
+@import './utils/mixins';
+@import './components/shared/Button';
+@import './components/pages/home';
+@import './components/layout/AppBar';
+@import './components/layout/SideNav';
+@import './components/layout/MobileNav';
+@import './components/layout/layout';
+@import './components/layout/Main';

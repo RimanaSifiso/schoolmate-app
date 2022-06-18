@@ -1,0 +1,14 @@
+.MobileNav {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  @include container-theme;
+
+  .btn {
+    color: inherit;
+    font-size: 3rem !important;
+  }
+  .btn.active {
+    color: $color-primary;
+  }
+}

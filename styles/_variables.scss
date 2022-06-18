@@ -1,0 +1,39 @@
+/*
+  @theme colors
+*/
+
+// @backgrounds
+$bg-dark-theme: #121212;
+$bg-card-dark-theme: lighten($bg-dark-theme, 5%);
+$bg-white-theme: #f6f7fb;
+
+/*
+   @text-color
+   universal text colors, will apply on low level text such as p, span
+*/
+$txt-color-dark-theme: rgba(#fff, 0.6);
+$txt-color-white-theme: rgba(#000, 0.8);
+
+// @colors
+$color-primary: #0669bf;
+
+// @evelation (border-radius and box-shadows
+$border-radius: 0.4rem;
+$box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$box-shadow-subtle: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+$box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+// @gutters
+$v-small-gutter: 1rem;
+$small-gutter: 2rem;
+$normal-gutter: 4rem;
+$large-gutter: 6rem;
+
+
+// @text-size
+$text-size-default: 1.6rem;
+$text-size-small: 1.2rem;
+$text-size-medium: 1.8rem;
+$text-size-big: 2rem;
+

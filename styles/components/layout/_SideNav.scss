@@ -1,0 +1,198 @@
+.SideNavWrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  @include blurred-bg;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .SideNav {
+    & {
+      width: 30%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-radius: $border-radius;
+      padding: 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      @include container-theme;
+      @media screen and (max-width: 800px) {
+        width: 70%;
+      }
+
+      h3 {
+        margin: 1rem 0;
+      }
+
+      .account-info {
+        display: flex;
+
+        align-items: center;
+        height: 5rem;
+        padding-bottom: $small-gutter;
+
+        .user-icon {
+          font-size: 3rem;
+          color: $color-primary;
+          margin-right: $small-gutter;
+          cursor: pointer;
+        }
+
+        & a {
+          &,
+          &:link,
+          &:visited,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: $text-size-medium;
+            color: $color-primary;
+            display: block;
+            transition: all 0.3s;
+          }
+        }
+      }
+
+      &.dark {
+        .links {
+          & a {
+            &,
+            &:link,
+            &:visited,
+            &:focus,
+            &:active {
+              color: $txt-color-dark-theme;
+            }
+          }
+        }
+      }
+
+      .links {
+        padding-bottom: $small-gutter;
+        & a {
+          &,
+          &:link,
+          &:visited,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $text-size-medium;
+            display: block;
+            transition: all 0.3s;
+            color: $txt-color-white-theme;
+            padding: 0.4rem 0;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .settings-theme {
+        label {
+          display: block;
+          position: relative;
+          padding-bottom: $small-gutter;
+          font-weight: 600;
+
+          display: flex;
+
+          span {
+            display: block;
+
+            &.toogler {
+              font-size: 2rem;
+              padding-right: 1rem;
+            }
+          }
+        }
+        input {
+          display: none;
+        }
+      }
+
+      &.dark {
+        & a.socials-icon {
+          &,
+          &:link,
+          &:visited,
+          &:focus,
+          &:active {
+            color: $txt-color-dark-theme !important;
+          }
+        }
+      }
+
+      .socials {
+        padding: $v-small-gutter 0;
+        margin-bottom: auto;
+
+        .socials-icons {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        & a.socials-icon {
+          &,
+          &:link,
+          &:visited,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $text-size-big;
+            display: block;
+            transition: all 0.3s;
+            color: $txt-color-white-theme;
+            padding: 0.4rem 0;
+            margin-right: 2rem;
+          }
+        }
+      }
+
+      & .logo-box {
+        justify-self: flex-end;
+        .logo {
+          height: 10rem !important;
+        }
+
+        & {
+          height: 20%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+          color: $color-primary;
+          font-size: $text-size-medium;
+
+          & .logo {
+            height: 100%;
+            padding: 1rem;
+
+            & span {
+              height: 100% !important;
+              margin-right: 2rem;
+
+              & img {
+                height: 100% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

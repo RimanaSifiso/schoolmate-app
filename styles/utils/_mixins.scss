@@ -1,0 +1,57 @@
+@mixin surface-theme {
+  & {
+    background-color: $bg-white-theme;
+    color: $txt-color-white-theme;
+  }
+
+  &.dark {
+    background-color: $bg-dark-theme;
+    color: $txt-color-dark-theme;
+  }
+}
+
+@mixin container-theme {
+  & {
+    background-color: white;
+    color: $txt-color-white-theme;
+  }
+
+  &.dark {
+    background-color: $bg-card-dark-theme;
+    color: $txt-color-dark-theme;
+  }
+}
+
+@mixin link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: $text-size-medium;
+  color: $color-primary;
+  display: block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+@mixin pure-link {
+  
+}
+
+@mixin center-abs-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin container {
+  @include container-theme;
+  padding: 2rem;
+  border-radius: $border-radius;
+}
+
+@mixin blurred-bg {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+}

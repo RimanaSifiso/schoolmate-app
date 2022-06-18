@@ -1,0 +1,59 @@
+.btn {
+  &,
+  &:link,
+  &:visited,
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+    font: inherit !important;
+    font-weight: 600 !important;
+    font-size: $text-size-medium !important;
+    cursor: pointer;
+  }
+
+  &-primary {
+    &.white {
+      background-color: $color-primary;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(
+          $color: $color-primary,
+          $amount: 10%
+        ) !important;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: $color-primary;
+    &.white {
+      &:hover {
+        background-color: lighten($color: $color-primary, $amount: 50%);
+      }
+      &:active {
+        background-color: lighten($color: $color-primary, $amount: 30%);
+      }
+    }
+    &.dark {
+      & {
+        &:hover {
+          background-color: darken($color: $color-primary, $amount: 20%);
+        }
+        &:active {
+          background-color: darken($color: $color-primary, $amount: 30%);
+        }
+      }
+    }
+  }
+}
